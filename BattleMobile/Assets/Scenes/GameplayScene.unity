@@ -546,14 +546,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1283397635}
-  m_LocalRotation: {x: -0, y: -0, z: 0.012397383, w: 0.99992317}
-  m_LocalPosition: {x: 0, y: 0, z: 0.95}
+  m_LocalRotation: {x: 0.0005875061, y: 0.023941195, z: 0.0002607149, w: 0.9997132}
+  m_LocalPosition: {x: 0.000000002854043, y: -6.929092e-11, z: 0.95}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 738290038}
   m_RootOrder: -1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 1.421}
+  m_LocalEulerAnglesHint: {x: 0.067, y: 2.744, z: 0.031}
 --- !u!212 &1283397637
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -910,17 +910,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2452256850461257604, guid: 7dc8e025270696a42932242090288a87, type: 3}
   m_PrefabInstance: {fileID: 2452256849182748729}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1935554795 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7366171738214622018, guid: 7dc8e025270696a42932242090288a87, type: 3}
-  m_PrefabInstance: {fileID: 2452256849182748729}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4a052d38b239866468e161a316cb4544, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &2452256849182748729
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -980,34 +969,6 @@ PrefabInstance:
     - target: {fileID: 2452256850461257604, guid: 7dc8e025270696a42932242090288a87, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6345967020739228579, guid: 7dc8e025270696a42932242090288a87, type: 3}
-      propertyPath: m_ActionEvents.Array.data[0].m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6345967020739228579, guid: 7dc8e025270696a42932242090288a87, type: 3}
-      propertyPath: m_ActionEvents.Array.data[0].m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6345967020739228579, guid: 7dc8e025270696a42932242090288a87, type: 3}
-      propertyPath: m_ActionEvents.Array.data[0].m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1935554795}
-    - target: {fileID: 6345967020739228579, guid: 7dc8e025270696a42932242090288a87, type: 3}
-      propertyPath: m_ActionEvents.Array.data[0].m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6345967020739228579, guid: 7dc8e025270696a42932242090288a87, type: 3}
-      propertyPath: m_ActionEvents.Array.data[0].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: OnMove
-      objectReference: {fileID: 0}
-    - target: {fileID: 6345967020739228579, guid: 7dc8e025270696a42932242090288a87, type: 3}
-      propertyPath: m_ActionEvents.Array.data[0].m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: PlayerController, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 6345967020739228579, guid: 7dc8e025270696a42932242090288a87, type: 3}
-      propertyPath: m_ActionEvents.Array.data[0].m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 7366171738214622018, guid: 7dc8e025270696a42932242090288a87, type: 3}
       propertyPath: walkspeed
