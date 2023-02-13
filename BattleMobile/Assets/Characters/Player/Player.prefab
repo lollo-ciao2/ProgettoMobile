@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2452256850461257602}
   - component: {fileID: 7366171738214622018}
   - component: {fileID: 6345967020739228579}
+  - component: {fileID: 3880762510628105799}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -120,6 +121,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a052d38b239866468e161a316cb4544, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  walkspeed: 5
 --- !u!114 &6345967020739228579
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -214,3 +216,23 @@ MonoBehaviour:
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!95 &3880762510628105799
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2452256850461257603}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f1703ce023827bc409569eaad66dd3cc, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
