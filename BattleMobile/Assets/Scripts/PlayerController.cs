@@ -8,8 +8,28 @@ using UnityEngine.InputSystem;
 public class PlayerController : MonoBehaviour
 {
     public float walkspeed = 5f;
+    public float runSpeed = 8f;
     Vector2 moveInput;
 
+    public float CurrentMoveSpeed { get
+        {
+            if(IsMoving)
+            {
+                if(IsRunning )
+                {
+                    return runSpeed;
+                } else
+                {
+                    return walkspeed;
+                }
+            }
+            else
+            {
+                return 0;
+            }
+        } }
+
+   [SerializeField]
     private bool _isMoving = false;
 
     public bool IsMoving { get
@@ -23,6 +43,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    [SerializeField]
     private bool _isRunning = false;
 
     public bool IsRunning
@@ -62,7 +83,7 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        rb.velocity = new Vector2(moveInput.x * walkspeed, rb.velocity.y);
+        rb.velocity = new Vector2(moveInput.x * CurrentMoveSpeed, rb.velocity.y);
     }
 
     public void OnMove(InputAction.CallbackContext context)
@@ -71,5 +92,16 @@ public class PlayerController : MonoBehaviour
         IsMoving = moveInput != Vector2.zero;
 
 
+    }
+
+    public void OnRun(InputAction.CallbackContext context)
+    {
+        if (context.started)
+        {
+            IsRunning = true;
+        } else if (context.canceled)
+        {
+            IsRunning = false;
+        }
     }
 }
