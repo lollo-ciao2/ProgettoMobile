@@ -8,9 +8,11 @@ using UnityEngine;
 public class Knight : MonoBehaviour
 {
     public float walkSpeed = 3f;
+    public DetectionZone attackZone;
 
     Rigidbody2D rb;
     TouchDirections touchingDirections;
+    Animator animator;
 
     public enum WalkableDirection { Right, Left }
 
@@ -37,10 +39,29 @@ public class Knight : MonoBehaviour
             _walkDirection = value; }
     }
 
+    public bool _hasTarget = false;
+
+    public bool HasTarget { get { return _hasTarget; } 
+        private set
+        {
+            _hasTarget = value;
+            animator.SetBool(AnimationStrings.hasTarget, value);
+
+        }
+    }
+
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         touchingDirections = GetComponent<TouchDirections>();
+        animator = GetComponent<Animator>();
+    }
+
+
+    // Update is called once per frame
+    void Update()
+    {
+        HasTarget = attackZone.DetectedColliders.Count > 0;
     }
 
     private void FixedUpdate()
@@ -68,15 +89,6 @@ public class Knight : MonoBehaviour
         }
     }
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+   
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
