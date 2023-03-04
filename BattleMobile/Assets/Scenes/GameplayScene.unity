@@ -13807,6 +13807,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2452256850461257604, guid: 7dc8e025270696a42932242090288a87, type: 3}
   m_PrefabInstance: {fileID: 2452256849182748729}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2001172662 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4711257466621748164, guid: 8b1c501b0836ce64b988ed64f75dab00, type: 3}
+  m_PrefabInstance: {fileID: 2124051194362745679}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0fb9b3c15c2c9544be2a20573e4b236, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2124051194362745679
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13815,6 +13826,14 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 410266928175068895, guid: 8b1c501b0836ce64b988ed64f75dab00, type: 3}
+      propertyPath: _hasTarget
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 410266928175068895, guid: 8b1c501b0836ce64b988ed64f75dab00, type: 3}
+      propertyPath: attackZone
+      value: 
+      objectReference: {fileID: 2001172662}
     - target: {fileID: 1845438670258652863, guid: 8b1c501b0836ce64b988ed64f75dab00, type: 3}
       propertyPath: m_Name
       value: KnightEnemy
@@ -13861,6 +13880,26 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3176490033086292664, guid: 8b1c501b0836ce64b988ed64f75dab00, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7651535290970773184, guid: 8b1c501b0836ce64b988ed64f75dab00, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7651535290970773184, guid: 8b1c501b0836ce64b988ed64f75dab00, type: 3}
+      propertyPath: m_AutoTiling
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7651535290970773184, guid: 8b1c501b0836ce64b988ed64f75dab00, type: 3}
+      propertyPath: m_EdgeRadius
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7651535290970773184, guid: 8b1c501b0836ce64b988ed64f75dab00, type: 3}
+      propertyPath: m_UsedByEffector
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7651535290970773184, guid: 8b1c501b0836ce64b988ed64f75dab00, type: 3}
+      propertyPath: m_UsedByComposite
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

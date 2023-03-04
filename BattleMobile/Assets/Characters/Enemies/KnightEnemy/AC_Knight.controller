@@ -9,7 +9,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: HasTarget
+    m_ConditionEvent: hasTarget
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 0}
@@ -34,7 +34,7 @@ AnimatorTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: HasTarget
+    m_ConditionEvent: hasTarget
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 7771480495328978923}
   m_DstState: {fileID: 0}
@@ -141,12 +141,12 @@ AnimatorStateMachine:
   m_AnyStateTransitions: []
   m_EntryTransitions: []
   m_StateMachineTransitions:
-  - first: {fileID: 7915783601148214637}
-    second:
-    - {fileID: -6654138068108094156}
   - first: {fileID: 7771480495328978923}
     second:
     - {fileID: 1772701601904681274}
+  - first: {fileID: 7915783601148214637}
+    second:
+    - {fileID: -6654138068108094156}
   m_StateMachineBehaviours: []
   m_AnyStatePosition: {x: 40, y: 40, z: 0}
   m_EntryPosition: {x: 40, y: 130, z: 0}
@@ -180,7 +180,7 @@ AnimatorController:
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
-  - m_Name: HasTarget
+  - m_Name: hasTarget
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
@@ -262,7 +262,7 @@ AnimatorTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 2
-    m_ConditionEvent: HasTarget
+    m_ConditionEvent: hasTarget
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 7915783601148214637}
   m_DstState: {fileID: 0}
