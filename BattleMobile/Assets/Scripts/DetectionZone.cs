@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DetectionZone : MonoBehaviour
 {
-    public List<Collider2D> DetectedColliders = new List<Collider2D>();
+    public List<Collider2D> detectedColliders = new List<Collider2D>();
     Collider2D col;
 
     private void Awake()
@@ -14,12 +14,12 @@ public class DetectionZone : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        DetectedColliders.Add(collision);
+        detectedColliders.Add(collision);
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        DetectedColliders.Remove(collision);
+        detectedColliders.Remove(collision);
     }
 
 }
