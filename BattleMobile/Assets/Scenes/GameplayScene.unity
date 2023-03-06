@@ -13827,6 +13827,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 410266928175068895, guid: 8b1c501b0836ce64b988ed64f75dab00, type: 3}
+      propertyPath: walkSpeed
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 410266928175068895, guid: 8b1c501b0836ce64b988ed64f75dab00, type: 3}
       propertyPath: _hasTarget
       value: 0
       objectReference: {fileID: 0}
@@ -13834,6 +13838,10 @@ PrefabInstance:
       propertyPath: attackZone
       value: 
       objectReference: {fileID: 2001172662}
+    - target: {fileID: 410266928175068895, guid: 8b1c501b0836ce64b988ed64f75dab00, type: 3}
+      propertyPath: walkStoprate
+      value: 0.05
+      objectReference: {fileID: 0}
     - target: {fileID: 1845438670258652863, guid: 8b1c501b0836ce64b988ed64f75dab00, type: 3}
       propertyPath: m_Name
       value: KnightEnemy
@@ -13844,11 +13852,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3176490033086292664, guid: 8b1c501b0836ce64b988ed64f75dab00, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.38
+      value: -6.57
       objectReference: {fileID: 0}
     - target: {fileID: 3176490033086292664, guid: 8b1c501b0836ce64b988ed64f75dab00, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.84
+      value: -0.76
       objectReference: {fileID: 0}
     - target: {fileID: 3176490033086292664, guid: 8b1c501b0836ce64b988ed64f75dab00, type: 3}
       propertyPath: m_LocalPosition.z
