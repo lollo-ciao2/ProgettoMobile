@@ -67,6 +67,7 @@ public class Knight : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         touchingDirections = GetComponent<TouchDirections>();
         animator = GetComponent<Animator>();
+        damageable = GetComponent<Damageable>();
     }
 
     

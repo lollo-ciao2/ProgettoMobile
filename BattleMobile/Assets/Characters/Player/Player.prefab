@@ -368,7 +368,7 @@ MonoBehaviour:
   _health: 100
   _isAlive: 1
   isInvincible: 0
-  invincibilityTime: 0.25
+  invincibilityTime: 1
 --- !u!1 &3571432001009162295
 GameObject:
   m_ObjectHideFlags: 0
@@ -380,7 +380,7 @@ GameObject:
   - component: {fileID: 311297594064965535}
   - component: {fileID: 6750328190892684384}
   - component: {fileID: 8130916701629574302}
-  m_Layer: 7
+  m_Layer: 9
   m_Name: SwordAttack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -395,7 +395,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3571432001009162295}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 1, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -412,7 +412,7 @@ PolygonCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -427,20 +427,14 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 1.4145594, y: 0.662742}
-      - {x: 1.0445256, y: 1.0739485}
-      - {x: 0.53461695, y: 1.1699376}
-      - {x: -0.1283775, y: 1.0947224}
-      - {x: -0.09865427, y: 0.8370738}
-      - {x: 0.46893167, y: 0.6480746}
-      - {x: 0.7024183, y: 0.19614363}
-      - {x: 0.69993496, y: -0.2817378}
-      - {x: 0.10548407, y: -0.77204263}
-      - {x: 0.5159478, y: -0.82367456}
-      - {x: 0.9412527, y: -0.7830664}
-      - {x: 1.318029, y: -0.5409528}
-      - {x: 1.4807901, y: -0.19620562}
-      - {x: 1.4964285, y: 0.22582483}
+    - - {x: 0.076948166, y: 1.0516315}
+      - {x: -0.62219715, y: 1.172356}
+      - {x: -1.1967134, y: 0.904827}
+      - {x: -0.2995758, y: 0.15602434}
+      - {x: -0.8770851, y: -0.7504605}
+      - {x: -0.1466217, y: -0.7940459}
+      - {x: 0.5210701, y: -0.017436445}
+      - {x: 0.5763874, y: 0.46131605}
   m_UseDelaunayMesh: 0
 --- !u!114 &8130916701629574302
 MonoBehaviour:
@@ -455,4 +449,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackDamage: 15
-  knockback: {x: 3, y: 1}
+  knockback: {x: 2, y: 0}
