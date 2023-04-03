@@ -1,9 +1,10 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-[RequireComponent(typeof(Rigidbody2D), typeof(TouchDirections))]
+[RequireComponent(typeof(Rigidbody2D), typeof(TouchDirections), typeof(Damageable))]
 
 public class PlayerController : MonoBehaviour
 {
@@ -13,6 +14,7 @@ public class PlayerController : MonoBehaviour
     private float jumpImpulse = 10f;
     Vector2 moveInput;
     TouchDirections touchingDirections; //lui la classe la chiama TouchingDirections 
+    Damageable damageable;
 
     public float CurrentMoveSpeed { get
         {
@@ -113,6 +115,10 @@ public class PlayerController : MonoBehaviour
 
 
         }
+        set
+        {
+            animator.SetBool(AnimationStrings.lockVelocity, value);
+        }
     }
 
     Rigidbody2D rb;
@@ -123,6 +129,7 @@ public class PlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         touchingDirections = GetComponent<TouchDirections>();
+        damageable = GetComponent<Damageable>();
     }
 
    
@@ -131,7 +138,7 @@ public class PlayerController : MonoBehaviour
     {
 
 
-        if(!LockVelocity)
+        if(!damageable.LockVelocity)
         rb.velocity = new Vector2(moveInput.x * CurrentMoveSpeed, rb.velocity.y);
 
         animator.SetFloat(AnimationStrings.yVelocity, rb.velocity.y);

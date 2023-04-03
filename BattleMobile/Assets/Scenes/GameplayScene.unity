@@ -13921,6 +13921,10 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 465275238526462583, guid: 7dc8e025270696a42932242090288a87, type: 3}
+      propertyPath: invincibilityTime
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2452256850461257603, guid: 7dc8e025270696a42932242090288a87, type: 3}
       propertyPath: m_Name
       value: Player
