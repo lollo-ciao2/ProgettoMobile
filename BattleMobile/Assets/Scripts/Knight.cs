@@ -84,10 +84,33 @@ public class Knight : MonoBehaviour
             animator.SetBool(AnimationStrings.lockVelocity, value);
         }
     }
+
+    public float AttackCooldown
+    {
+        get
+        {
+
+            return animator.GetFloat(AnimationStrings.AttackCooldown);
+
+
+        }
+        private set
+        {
+            animator.SetFloat(AnimationStrings.AttackCooldown, Mathf.Max(value, 0));
+        }
+    }
+
+
     // Update is called once per frame
     void Update()
     {
         HasTarget = attackZone.detectedColliders.Count > 0;
+
+        if (AttackCooldown > 0)
+        {
+            AttackCooldown -= Time.deltaTime;
+
+        }
     }
 
     private void FixedUpdate()
