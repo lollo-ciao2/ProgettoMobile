@@ -14400,7 +14400,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4605380644110632775, guid: 3d09e1667605bb545b60491a2bbc7dda, type: 3}
       propertyPath: moveSpeed.y
-      value: 1000
+      value: 75
       objectReference: {fileID: 0}
     - target: {fileID: 6755511823752755908, guid: 3d09e1667605bb545b60491a2bbc7dda, type: 3}
       propertyPath: m_Name
