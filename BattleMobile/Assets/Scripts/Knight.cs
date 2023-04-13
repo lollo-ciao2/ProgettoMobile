@@ -10,6 +10,7 @@ public class Knight : MonoBehaviour
     public float walkSpeed = 3f;
     public float walkStopRate = 0.05f;
     public DetectionZone attackZone;
+    public DetectionZone cliffDetectionZone;
 
     Rigidbody2D rb;
     TouchDirections touchingDirections;
@@ -151,6 +152,12 @@ public class Knight : MonoBehaviour
         rb.velocity = new Vector2(knockback.x, rb.velocity.y + knockback.y);
     }
 
-   
+   public void OnCliffDetected()
+    {
+        if (touchingDirections.IsGrounded)
+        {
+            FlipDirection();
+        }
+    }
 
 }

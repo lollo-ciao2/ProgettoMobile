@@ -26,7 +26,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 691076603245847889}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.88, y: -13.74, z: -0.08967176}
+  m_LocalPosition: {x: -0.83, y: 10.12, z: -0.08967176}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -45,6 +45,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0fb9b3c15c2c9544be2a20573e4b236, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  noCollidersRemain:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 410266928175068895}
+        m_TargetAssemblyTypeName: Knight, Assembly-CSharp
+        m_MethodName: OnCliffDetected
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   detectedColliders: []
 --- !u!61 &4514868614157054447
 BoxCollider2D:
@@ -59,7 +74,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.11605859}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -70,7 +85,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1, y: 1.2321172}
   m_EdgeRadius: 0
 --- !u!1 &1845438670258652863
 GameObject:
@@ -217,6 +232,7 @@ MonoBehaviour:
   walkSpeed: 3
   walkStopRate: 0.05
   attackZone: {fileID: 4711257466621748164}
+  cliffDetectionZone: {fileID: 5254141805186134354}
   _hasTarget: 0
 --- !u!114 &1625188098943437274
 MonoBehaviour:
@@ -443,4 +459,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0fb9b3c15c2c9544be2a20573e4b236, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  noCollidersRemain:
+    m_PersistentCalls:
+      m_Calls: []
   detectedColliders: []
