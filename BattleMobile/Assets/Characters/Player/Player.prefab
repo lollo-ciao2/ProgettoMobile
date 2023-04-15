@@ -1,5 +1,94 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &722098326680528867
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4319809375973888532}
+  - component: {fileID: 6427661674618248582}
+  - component: {fileID: 5120043401234822495}
+  m_Layer: 9
+  m_Name: SwordAttack2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4319809375973888532
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 722098326680528867}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2452256850461257604}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!60 &6427661674618248582
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 722098326680528867}
+  m_Enabled: 0
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.073492646, y: 0.6330136}
+      - {x: -0.11854747, y: 0.67524725}
+      - {x: -0.42488655, y: 0.5254545}
+      - {x: -0.33544898, y: 0.42622057}
+      - {x: -0.19492131, y: 0.23451519}
+      - {x: -0.13287315, y: -0.0013931394}
+      - {x: -0.2619163, y: -0.45381957}
+      - {x: -0.75629365, y: -0.6443096}
+      - {x: -1.363139, y: -0.581664}
+      - {x: -1.3223029, y: -0.8078529}
+      - {x: -1.3087847, y: -0.999015}
+      - {x: -0.8920144, y: -1.0991524}
+      - {x: -0.09429446, y: -0.9641094}
+      - {x: 0.27864665, y: -0.5888925}
+      - {x: 0.35100663, y: -0.05668187}
+      - {x: 0.24934208, y: 0.2912525}
+  m_UseDelaunayMesh: 0
+--- !u!114 &5120043401234822495
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 722098326680528867}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da4024f92e4614441b92dd600684b514, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackDamage: 15
+  knockback: {x: 1, y: 0}
 --- !u!1 &2452256850461257603
 GameObject:
   m_ObjectHideFlags: 0
@@ -37,6 +126,8 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 311297594064965535}
+  - {fileID: 4319809375973888532}
+  - {fileID: 5849825593268650376}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -381,7 +472,7 @@ GameObject:
   - component: {fileID: 6750328190892684384}
   - component: {fileID: 8130916701629574302}
   m_Layer: 9
-  m_Name: SwordAttack
+  m_Name: SwordAttack1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -409,7 +500,7 @@ PolygonCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3571432001009162295}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
@@ -448,5 +539,88 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da4024f92e4614441b92dd600684b514, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackDamage: 15
-  knockback: {x: 2, y: 0}
+  attackDamage: 10
+  knockback: {x: 1, y: 0}
+--- !u!1 &4501805417508220767
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5849825593268650376}
+  - component: {fileID: 6291526463976852253}
+  - component: {fileID: 850540583675192023}
+  m_Layer: 9
+  m_Name: SwordAttack3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5849825593268650376
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4501805417508220767}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2452256850461257604}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!60 &6291526463976852253
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4501805417508220767}
+  m_Enabled: 0
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.19176516, y: 0.08127785}
+      - {x: -0.3086983, y: 0.14975238}
+      - {x: -0.39057344, y: 0.11361551}
+      - {x: -0.44886097, y: -0.03058213}
+      - {x: -1.6459037, y: -0.98931664}
+      - {x: -0.75765693, y: -0.9445312}
+      - {x: 0.010127753, y: -0.8612242}
+      - {x: 0.5527768, y: -0.53291374}
+      - {x: 0.431499, y: -0.18165016}
+      - {x: 0.20317438, y: -0.07611066}
+  m_UseDelaunayMesh: 0
+--- !u!114 &850540583675192023
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4501805417508220767}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da4024f92e4614441b92dd600684b514, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackDamage: 25
+  knockback: {x: 5, y: 0}
