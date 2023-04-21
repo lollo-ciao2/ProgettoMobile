@@ -7,7 +7,11 @@ public class FadeRemove : StateMachineBehaviour
 
     public float fadeTime = 0.5f;
 
+    public float fadeDelay = 0.0f;
+
     private float timeElapsed = 0f;
+
+    private float fadeDelayElapsed = 0f;
 
     SpriteRenderer spriteRenderer;
 
@@ -18,6 +22,7 @@ public class FadeRemove : StateMachineBehaviour
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+
         timeElapsed = 0f;
         spriteRenderer = animator.GetComponent<SpriteRenderer>();
         startColor = spriteRenderer.color;
@@ -27,16 +32,25 @@ public class FadeRemove : StateMachineBehaviour
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        timeElapsed = timeElapsed + Time.deltaTime;
 
-        float newAlpha = startColor.a * (1 - (timeElapsed / fadeTime));
-
-        spriteRenderer.color = new Color(startColor.r, startColor.g, startColor.b, newAlpha);
-
-         if(timeElapsed >fadeTime)
+        if(fadeDelay > fadeDelayElapsed)
         {
-            Destroy(objToRemove);
+            fadeDelayElapsed += Time.deltaTime;
         }
+        else
+        {
+            timeElapsed += Time.deltaTime;
+
+            float newAlpha = startColor.a * (1 - (timeElapsed / fadeTime));
+
+            spriteRenderer.color = new Color(startColor.r, startColor.g, startColor.b, newAlpha);
+
+            if (timeElapsed > fadeTime)
+            {
+                Destroy(objToRemove);
+            }
+        }
+        
     }
     
 }
