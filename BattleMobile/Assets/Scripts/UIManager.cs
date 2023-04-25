@@ -1,5 +1,5 @@
-using System.Collections;
 using System.Collections.Generic;
+using System.Collections;
 using TMPro;
 using UnityEngine;
 
@@ -47,4 +47,27 @@ public class UIManager : MonoBehaviour
 
         tmpText.text = healthRestored.ToString();
     }
+
+    public void OnExitGame(UnityEngine.InputSystem.InputAction.CallbackContext context)
+    {
+        if (context.started)
+        {
+        #if (UNITY_EDITOR || DEVELOPEMENT_BUILD)
+                  Debug.Log(this.name + " : " + this.GetType() + " : " + System.Reflection.MethodBase.GetCurrentMethod().Name);
+         #endif
+
+         #if (UNITY_EDITOR) 
+                   UnityEditor.EditorApplication.isPlaying = false;
+         #elif (UNITY_STANDLONE)
+                    Application.Quit();
+         #elif (UNITY_WEBGL)
+                    SceneManager.LoadScene("QuitScene");
+         #endif
+
+
+
+
+        }
+    }
 }
+

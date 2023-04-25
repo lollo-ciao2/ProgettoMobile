@@ -14691,7 +14691,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 451284869623054187, guid: 266ccfbde002b044785ad1c026341b97, type: 3}
       propertyPath: m_Name
-      value: UManager
+      value: UIManager
       objectReference: {fileID: 0}
     - target: {fileID: 1307776649764932269, guid: 266ccfbde002b044785ad1c026341b97, type: 3}
       propertyPath: m_RootOrder
