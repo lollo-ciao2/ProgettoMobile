@@ -12,9 +12,14 @@ public class PlayerController : MonoBehaviour
     public float runSpeed = 8f;
     public float airWalkSpeed = 3f;
     private float jumpImpulse = 10f;
+
+    public FixedJoystick joystick;
+
     Vector2 moveInput;
     TouchDirections touchingDirections; //lui la classe la chiama TouchingDirections 
     Damageable damageable;
+
+
 
     public float CurrentMoveSpeed { get
         {
