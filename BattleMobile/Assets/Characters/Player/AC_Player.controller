@@ -1563,16 +1563,16 @@ AnimatorStateMachine:
   - {fileID: -5949871952940631691}
   m_EntryTransitions: []
   m_StateMachineTransitions:
+  - first: {fileID: -8536921282872761909}
+    second:
+    - {fileID: 4487217531720821910}
+    - {fileID: -3279335346611712409}
   - first: {fileID: -1802163360783124363}
     second:
     - {fileID: 6881384069371665351}
     - {fileID: -1122952523683045767}
     - {fileID: 5306612980121920525}
     - {fileID: 5222802580083114073}
-  - first: {fileID: -8536921282872761909}
-    second:
-    - {fileID: 4487217531720821910}
-    - {fileID: -3279335346611712409}
   - first: {fileID: -547445555959670529}
     second:
     - {fileID: -7659697270424862376}
